@@ -5,7 +5,7 @@ const getAllUsers = async (req, res) => {
         const result = await db.query(
             "SELECT * FROM users"
         )
-        res.json(result.rows)
+        res.json(result)
     } catch {
         res.status(500).json({error: "Internal server error"})
     }
